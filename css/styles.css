@@ -1,55 +1,69 @@
 :root {
-    --primary-bg-color: #FFFFFF;
-    --additional-bg-color: #F5F4FA;
-    --footer-bg-color: #2F303A;
-    --blue-color: #2196F3;
-    --heading-text: #212121;
-    --primary-text: #757575;
-    --black-color: #000000;
-    --white-translucent: rgba(255, 255, 255, 0.6);
-    --main-font-family: Roboto;
-    
+  --primary-bg-color: #ffffff;
+  --additional-bg-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
+  --blue-color: #2196f3;
+  --heading-text: #212121;
+  --primary-text: #757575;
+  --black-color: #000000;
+  --white-translucent: rgba(255, 255, 255, 0.6);
+  --main-font-family: Roboto;
+  --bold: 700;
+  --primary-font-size: 16px;
 }
 
 body {
-    background-color: var(--additional-bg-color);
-    color: var(--primary-text);
-    font-family: var(--main-font-family), sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+  color: var(--primary-text);
+  font-family: var(--main-font-family), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.header,
+.benefits,
+.services,
+.filter,
+.projects {
+  background-color: var(--primary-bg-color);
 }
 
 /* Header */
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    color: var(--black-color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: var(--bold);
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--black-color);
 }
 
 .logo .first-part {
-    color: var(--blue-color);
+  color: var(--blue-color);
 }
 
 .list {
-    list-style: none;
+  list-style: none;
 }
 
 .navigation .link,
 .contacts .link {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-.navigation .link { color: var(--heading-text); }
+.navigation .link {
+  color: var(--heading-text);
+}
 
-.contacts .link { color: var(--primary-text); }
+.contacts .link {
+  color: var(--primary-text);
+}
 
 .link.current,
 .link:hover,
@@ -57,21 +71,136 @@ body {
 .address .link:focus,
 .address .link:hover,
 .link .second-part:focus,
-.link .second-part:hover {
-    color: var(--blue-color);
+.link .second-part:hover,
+.link .heading:hover,
+.link .heading:focus,
+.link .type:hover,
+.link .type:focus {
+  color: var(--blue-color);
+}
+
+/* Main page */
+
+.banner {
+  background-color: var(--footer-bg-color);
+}
+
+.banner-heading {
+  color: var(--primary-bg-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.order-button {
+  background-color: var(--blue-color);
+  color: var(--primary-bg-color);
+  font-family: var(--main-font-family);
+  font-weight: var(--bold);
+  font-size: var(--primary-font-size);
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.heading {
+  color: var(--heading-text);
+  font-weight: var(--bold);
+}
+.benefits .heading {
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.services .heading,
+.team .heading {
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.team {
+  background-color: var(--additional-bg-color);
+}
+
+.team-worker {
+  color: var(--heading-text);
+  font-weight: 500;
+}
+
+.team-worker,
+.team-position {
+  font-size: var(--primary-font-size);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Portfolio */
+
+.filter-button {
+  background-color: var(--additional-bg-color);
+  color: var(--heading-text);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: var(--primary-font-size);
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: inherit;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--blue-color);
+  color: var(--primary-bg-color);
+}
+
+.projects .heading {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects .type {
+  color: var(--primary-text);
+  font-size: var(--primary-font-size);
+  line-height: 1.88;
 }
 
 /* Footer */
 
-.footer { background-color: var(--footer-bg-color);}
-
-.logo .second-part { color: var(--primary-bg-color); }
-
-.address {
-    font-style: normal;
-    line-height: 1.7;
+.footer {
+  background-color: var(--footer-bg-color);
 }
 
-.address .map { color: var(--primary-bg-color); }
-.address .contact { color: var(--white-translucent); }
+.logo .second-part {
+  color: var(--primary-bg-color);
+}
 
+.address {
+  font-style: normal;
+}
+
+.address .map {
+  color: var(--primary-bg-color);
+}
+
+.address .contact {
+  color: var(--white-translucent);
+}
