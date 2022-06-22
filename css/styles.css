@@ -15,7 +15,6 @@
 body {
   color: var(--primary-text);
   font-family: var(--main-font-family), sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -66,16 +65,12 @@ body {
 }
 
 .link.current,
-.link:hover,
-.link:focus,
-.address .link:focus,
-.address .link:hover,
-.link .second-part:focus,
-.link .second-part:hover,
-.link .heading:hover,
-.link .heading:focus,
-.link .type:hover,
-.link .type:focus {
+.navigation .link:hover,
+.navigation .link:focus,
+.contacts .link:hover,
+.contacts .link:focus,
+.contact.link:focus,
+.contact.link:hover {
   color: var(--blue-color);
 }
 
@@ -120,18 +115,19 @@ body {
   overflow: hidden;
 }
 
-.heading {
+.title,
+.section-title {
   color: var(--heading-text);
   font-weight: var(--bold);
 }
-.benefits .heading {
+
+.benefits .title {
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.services .heading,
-.team .heading {
+.section-title {
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
@@ -167,13 +163,18 @@ body {
   cursor: pointer;
 }
 
+.current.filter-button {
+  background-color: var(--blue-color);
+  color: var(--primary-bg-color);
+}
+
 .filter-button:hover,
 .filter-button:focus {
   background-color: var(--blue-color);
   color: var(--primary-bg-color);
 }
 
-.projects .heading {
+.projects .title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
