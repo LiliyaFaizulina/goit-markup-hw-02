@@ -80,7 +80,7 @@ body {
   background-color: var(--footer-bg-color);
 }
 
-.banner-heading {
+.banner-title {
   color: var(--primary-bg-color);
   font-weight: 900;
   font-size: 44px;
